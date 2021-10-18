@@ -1,0 +1,28 @@
+package com.atguigu.gmall.bean;
+
+/**
+ * @author sunzhipeng
+ * @create 2021-05-09 22:26
+ */
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.math.BigDecimal;
+
+/**
+ * Author: Felix
+ * Desc: 地区交易额统计实体类
+ */
+@AllArgsConstructor
+@Data
+@NoArgsConstructor
+public class ProvinceStats {
+    private String stt;
+    private String edt;
+    private String province_id;
+    private String province_name;
+    private BigDecimal order_amount;
+    private String ts;
+}
