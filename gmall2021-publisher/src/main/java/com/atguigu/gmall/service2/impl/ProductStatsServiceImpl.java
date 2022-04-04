@@ -6,6 +6,7 @@ import com.atguigu.gmall.service2.ProductStatsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 /**
@@ -16,6 +17,12 @@ import java.util.List;
 public class ProductStatsServiceImpl implements ProductStatsService {
     @Autowired
     ProductStatsMapper productStatsMapper;
+
+    @Override
+    public BigDecimal getGMV(int date) {
+        return productStatsMapper.getGMV(date);
+    }
+
     @Override
     public List<ProductStats> getProductStatsGroupBySpu(int date, int limit) {
         return productStatsMapper.getProductStatsGroupBySpu(date,limit);

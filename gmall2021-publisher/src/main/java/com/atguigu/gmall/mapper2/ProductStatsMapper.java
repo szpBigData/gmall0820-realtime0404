@@ -4,6 +4,7 @@ import com.atguigu.gmall.bean2.ProductStats;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
@@ -19,6 +20,11 @@ import java.util.List;
  *
  */
 public interface ProductStatsMapper {
+    @Select("select sum(order_amount)  order_amount from product_stats_2021 where toYYYYMMDD(stt)=#{date}")
+    public BigDecimal getGMV(int date);
+
+
+
     @Select("SELECT spu_id,\n" +
             "spu_name,\n" +
             "SUM(order_amount) order_amount,\n" +

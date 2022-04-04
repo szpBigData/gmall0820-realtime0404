@@ -1,0 +1,16 @@
+在可视化大屏中每个组件都需要一个单独的接口，图中一共涉及8个组件。
+组件名称	组件	查询指标	对应的数据表
+总成交金额	数字翻牌	订单总金额	product_stats
+省市热力图查询	热力图	省市分组订单金额	province_stats
+分时流量	折线图	UV分时数
+PV分时数
+新用户分时数	visitor_stats
+品牌TopN	水平柱状图	按品牌分组订单金额	product_stats
+品类分布	饼状图	按品类分组订单金额	product_stats
+热词字符云	字符云	关键词分组计数	keyword_stats
+流量表格	交叉透视表	UV数(新老用户)
+PV数(新老用户)
+跳出率(新老用户)
+平均访问时长 (新老用户)
+平均访问页面数(新老用户)	visitor_stats
+热门商品	轮播表格	按SPU分组订单金额	product_stats
